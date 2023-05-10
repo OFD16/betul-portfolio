@@ -22,11 +22,14 @@ class _HomeState extends State<Home> {
         children: [
           FittedBox(
               child: topSection(header: headerWidget(), body: bodyWidget())),
+          midSection(),
         ],
+
       ),
     );
   }
 
+  /// top section
   Widget topSection({required Widget header, required Widget body}) {
     return Stack(
       children: [
@@ -69,7 +72,8 @@ class _HomeState extends State<Home> {
                     softWrap: true, style: AppTextStyles.nameTitle)),
             TextButton(
               onPressed: () => {},
-              child: const Text('My Project', style: AppTextStyles.menuItemStyle),
+              child:
+                  const Text('My Project', style: AppTextStyles.menuItemStyle),
             ),
             TextButton(
               onPressed: () => {},
@@ -81,7 +85,8 @@ class _HomeState extends State<Home> {
             ),
             TextButton(
               onPressed: () => {},
-              child: const Text('Contact Me', style: AppTextStyles.menuItemStyle),
+              child:
+                  const Text('Contact Me', style: AppTextStyles.menuItemStyle),
             ),
           ],
         ),
@@ -93,7 +98,7 @@ class _HomeState extends State<Home> {
     Size size = MediaQuery.of(context).size;
     var horizontalPadding = (size.width - size.width * 0.9298245614);
     return Padding(
-      padding: EdgeInsets.only(top: 120, left: horizontalPadding, right: horizontalPadding),
+      padding: EdgeInsets.symmetric(vertical: 120, horizontal: horizontalPadding),
       child: Row(
         children: [
           profilePicHolder(),
@@ -159,17 +164,19 @@ class _HomeState extends State<Home> {
               ),
             ],
           ),
-          Row(children: [
-            Text(
-              'who ',
-              style: AppTextStyles.nameMidTitle,
-            ),
-            InlineHoverableText(text: 'writers'),
-            Text(
-              ' about design.',
-              style: AppTextStyles.nameMidTitle,
-            ),
-          ],)
+          Row(
+            children: [
+              Text(
+                'who ',
+                style: AppTextStyles.nameMidTitle,
+              ),
+              InlineHoverableText(text: 'writers'),
+              Text(
+                ' about design.',
+                style: AppTextStyles.nameMidTitle,
+              ),
+            ],
+          )
         ],
       ),
     );
@@ -187,6 +194,49 @@ class _HomeState extends State<Home> {
   }
 }
 
+/// mid section
+Widget midSection() {
+  return Stack(
+    children: <Widget>[
+      Container(
+        width: double.infinity,
+        height: 300,
+        margin: const EdgeInsets.fromLTRB(0, 0, 20, 0),
+        padding: const EdgeInsets.only(bottom: 10, top: 10),
+        decoration: const BoxDecoration(
+          border: Border(
+            top: BorderSide(color: Colors.black, width: 3),
+            right: BorderSide(color: Colors.black, width: 3),
+            bottom: BorderSide(color: Colors.black, width: 3),
+            left: BorderSide(color: Colors.black, width: 3), // set left border color to black
+          ),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(0),
+            topRight: Radius.circular(10),
+            bottomRight: Radius.circular(10),
+            bottomLeft: Radius.circular(0),
+          ),
+          shape: BoxShape.rectangle,
+        ),
+      ),
+      Positioned(
+        left: 50,
+        top: -40,
+        //bottom: 80,
+        child: Container(
+          padding: const EdgeInsets.only(bottom: 10, left: 10, right: 10, top: 10),
+          color: Colors.white,
+          child: const Text(
+            'Some of my Projects',
+            style: AppTextStyles.nameMidTitle,
+          ),
+        ),
+      ),
+    ],
+  );
+}
+
+///Components
 class HoverableText extends StatefulWidget {
   final String text;
 
