@@ -1,8 +1,9 @@
+import 'package:betul_portfolio/design/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
   static const TextStyle nameSmallTitle = TextStyle(
-    color: Colors.black,
+    color: AppColors.darkGrey,
     fontFamily: 'Sansita',
     fontSize: 24,
     fontWeight: FontWeight.w700, // Set the font weight to 700
