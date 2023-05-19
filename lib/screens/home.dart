@@ -3,6 +3,7 @@ import 'dart:js_interop';
 import 'package:betul_portfolio/design/app_colors.dart';
 import 'package:flutter/material.dart';
 
+import '../components/listerContentWidget.dart';
 import '../design/app_text_styles.dart';
 
 class Home extends StatefulWidget {
@@ -11,6 +12,27 @@ class Home extends StatefulWidget {
   @override
   State<Home> createState() => _HomeState();
 }
+
+final data = [
+  {
+    'id': 'a1',
+    'image':
+        'https://www.shutterstock.com/image-photo/word-example-written-on-magnifying-260nw-1883859943.jpg',
+    'description': 'I am Omar.'
+  },
+  {
+    'id': 'a2',
+    'image':
+        'https://t3.ftcdn.net/jpg/00/92/53/56/360_F_92535664_IvFsQeHjBzfE6sD4VHdO8u5OHUSc6yHF.jpg',
+    'description': 'This is another item.',
+  },
+  {
+    'id': 'a3',
+    'image':
+        'https://thumbs.dreamstime.com/b/example-red-tag-example-red-square-price-tag-117502755.jpg',
+    'description': 'And here is one more item.',
+  }
+];
 
 class _HomeState extends State<Home> {
   final description =
@@ -25,283 +47,15 @@ class _HomeState extends State<Home> {
           FittedBox(
               child: topSection(header: headerWidget(), body: bodyWidget())),
           const SizedBox(height: 20),
-          //midSection(),
+          midSection(),
           // const CustomTitleWidget(
           //   height: 200,
           //   width: double.infinity,
           //   title: 'Some of my Projects',
           //   radius: 20,
           // ),
-          cardListerWidget(
-            title: 'Some of my Projects',
-            content: listerContentsWidget(),
-          ),
-
-          cardListerWidget(
-            title: 'Some of my Blog Posts',
-            content: listerContentsWidget(),
-            isRight: true,
-          ),
-          // Stack(
-          //   children: <Widget>[
-          //     Container(
-          //       width: double.infinity,
-          //       margin: const EdgeInsets.fromLTRB(0, 20, 20, 10),
-          //       padding: const EdgeInsets.all(30),
-          //       decoration: BoxDecoration(
-          //         border: Border.all(color: Colors.black, width: 2),
-          //         borderRadius: const BorderRadius.only(
-          //           topRight: Radius.circular(20),
-          //           bottomRight: Radius.circular(20),
-          //         ),
-          //         shape: BoxShape.rectangle,
-          //         color: AppColors.lightGrey4,
-          //       ),
-          //       child: SingleChildScrollView(
-          //         child: GridView.builder(
-          //           gridDelegate:
-          //               const SliverGridDelegateWithFixedCrossAxisCount(
-          //             crossAxisCount: 2,
-          //           ),
-          //           physics: const NeverScrollableScrollPhysics(),
-          //           shrinkWrap: true,
-          //           itemCount: 4,
-          //           itemBuilder: (BuildContext context, int index) {
-          //             return Stack(
-          //               children: <Widget>[
-          //                 Container(
-          //                     height: 454,
-          //                     width: double.infinity,
-          //                     margin: const EdgeInsets.fromLTRB(20, 20, 20, 10),
-          //                     padding: const EdgeInsets.all(30),
-          //                     decoration: BoxDecoration(
-          //                       border:
-          //                           Border.all(color: Colors.black, width: 2),
-          //                       borderRadius:
-          //                           const BorderRadius.all(Radius.circular(20)),
-          //                       boxShadow: [
-          //                         BoxShadow(
-          //                           color: Colors.black.withOpacity(0.7),
-          //                           spreadRadius: 2,
-          //                           blurRadius: 0,
-          //                           offset: const Offset(4, 4),
-          //                         ),
-          //                       ],
-          //                       shape: BoxShape.rectangle,
-          //                       color: AppColors.lightGreen,
-          //                     ),
-          //                     child: Column(
-          //                       children: [
-          //                         Container(
-          //                           margin: const EdgeInsets.only(bottom: 20),
-          //                           height: 195,
-          //                           width: 460,
-          //                           child: AspectRatio(
-          //                             aspectRatio:
-          //                                 460 / 195, // Width divided by Height
-          //                             child: Image.network(
-          //                               'https://images.ctfassets.net/hrltx12pl8hq/7JnR6tVVwDyUM8Cbci3GtJ/bf74366cff2ba271471725d0b0ef418c/shutterstock_376532611-og.jpg',
-          //                               fit: BoxFit.cover,
-          //                             ),
-          //                           ),
-          //                         ),
-          //                         const Text(
-          //                           'Lorem ipsum dolor sit amet consectetur. Velit semper dignissim lacus vel sit vehicula facilisis arcu pharetra. ömer ömer ömer ömer ömer  ömer  ömer  ömer  ömer  ömer  ömer  ömer  ömer  Turpis volutpat tristique nulla accumsan',
-          //                           style: AppTextStyles.cardDescription,
-          //                         ),
-          //                       ],
-          //                     )),
-          //                 Positioned(
-          //                   left: 50,
-          //                   top: -2,
-          //                   child: Container(
-          //                     padding: const EdgeInsets.only(
-          //                         bottom: 10, left: 10, right: 10),
-          //                     decoration: const BoxDecoration(
-          //                       gradient: LinearGradient(
-          //                         colors: [
-          //                           AppColors.lightGrey4,
-          //                           AppColors.lightGreen
-          //                         ],
-          //                         begin: Alignment.topCenter,
-          //                         end: Alignment.bottomCenter,
-          //                         stops: [0.5, 0.5],
-          //                       ),
-          //                     ),
-          //                     child: const Text(
-          //                       'Redisgn',
-          //                       style: AppTextStyles.cardTitle,
-          //                     ),
-          //                   ),
-          //                 ),
-          //               ],
-          //             );
-          //           },
-          //         ),
-          //         // child: GridView.count(
-          //         //   crossAxisCount: 2,
-          //         //   shrinkWrap: true,
-          //         //   physics: const NeverScrollableScrollPhysics(),
-          //         //   children: List.generate(6, (index) {
-          //         //     return
-          //         //   }),
-          //         // ),
-          //       ),
-          //     ),
-          //     Positioned(
-          //       left: 50,
-          //       top: 0,
-          //       child: Container(
-          //         padding:
-          //             const EdgeInsets.only(bottom: 10, left: 10, right: 10),
-          //         decoration: const BoxDecoration(
-          //           gradient: LinearGradient(
-          //             colors: [AppColors.mainBackground, AppColors.lightGrey4],
-          //             begin: Alignment.topCenter,
-          //             end: Alignment.bottomCenter,
-          //             stops: [0.5, 0.5],
-          //           ),
-          //         ),
-          //         child: const Text(
-          //           'Some of My Projects',
-          //           style: AppTextStyles.nameTitle,
-          //         ),
-          //       ),
-          //     ),
-          //   ],
-          // ),
         ],
       ),
-    );
-  }
-
-  Widget listerContentsWidget() {
-    return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-      ),
-      physics: const NeverScrollableScrollPhysics(),
-      shrinkWrap: true,
-      itemCount: 4,
-      itemBuilder: (BuildContext context, int index) {
-        return Stack(
-          children: <Widget>[
-            Container(
-                height: 454,
-                width: double.infinity,
-                margin: const EdgeInsets.fromLTRB(20, 20, 20, 10),
-                padding: const EdgeInsets.all(30),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black, width: 2),
-                  borderRadius: const BorderRadius.all(Radius.circular(20)),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.7),
-                      spreadRadius: 2,
-                      blurRadius: 0,
-                      offset: const Offset(4, 4),
-                    ),
-                  ],
-                  shape: BoxShape.rectangle,
-                  color: AppColors.lightGreen,
-                ),
-                child: Column(
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(bottom: 20),
-                      height: 195,
-                      width: 460,
-                      child: AspectRatio(
-                        aspectRatio: 460 / 195, // Width divided by Height
-                        child: Image.network(
-                          'https://images.ctfassets.net/hrltx12pl8hq/7JnR6tVVwDyUM8Cbci3GtJ/bf74366cff2ba271471725d0b0ef418c/shutterstock_376532611-og.jpg',
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const Text(
-                      'Lorem ipsum dolor sit amet consectetur. Velit semper dignissim lacus vel sit vehicula facilisis arcu pharetra. ömer ömer ömer ömer ömer  ömer  ömer  ömer  ömer  ömer  ömer  ömer  ömer  Turpis volutpat tristique nulla accumsan',
-                      style: AppTextStyles.cardDescription,
-                    ),
-                  ],
-                )),
-            Positioned(
-              left: 50,
-              top: -2,
-              child: Container(
-                padding: const EdgeInsets.only(bottom: 10, left: 10, right: 10),
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [AppColors.lightGrey4, AppColors.lightGreen],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    stops: [0.5, 0.5],
-                  ),
-                ),
-                child: const Text(
-                  'Redisgn',
-                  style: AppTextStyles.cardTitle,
-                ),
-              ),
-            ),
-          ],
-        );
-      },
-    );
-  }
-
-  //Lister
-  Widget cardListerWidget(
-      {Widget? content,
-      BoxDecoration? decoration,
-      String? title,
-      TextStyle? titleStyle,
-      List<Color>? titleBackgroundColors,
-      EdgeInsetsGeometry? mainAxis,
-      double? positionTop,
-      double? positionLeft,
-      bool isRight = false}) {
-    Color starterColor = titleBackgroundColors?[0] ?? AppColors.mainBackground;
-    Color finishColor = titleBackgroundColors?[1] ?? AppColors.lightGrey4;
-
-    return Stack(
-      children: <Widget>[
-        Container(
-          width: double.infinity,
-          margin: mainAxis ?? const EdgeInsets.all(20),
-          padding: const EdgeInsets.all(30),
-          decoration: decoration ??
-              BoxDecoration(
-                border: Border.all(color: Colors.black, width: 2),
-                borderRadius: const BorderRadius.all(Radius.circular(20)),
-                shape: BoxShape.rectangle,
-                color: finishColor,
-              ),
-          child: SingleChildScrollView(
-            child: content,
-          ),
-        ),
-        Positioned(
-          left: isRight ? null : positionLeft ?? 50,
-          right: isRight ? positionLeft ?? 50 : null,
-          top: positionTop ?? 0,
-          child: Container(
-            padding: const EdgeInsets.only(bottom: 10, left: 10, right: 10),
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [starterColor, finishColor],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                stops: [0.5, 0.5],
-              ),
-            ),
-            child: Text(
-              title ?? 'title of the Card',
-              style: titleStyle ?? AppTextStyles.nameTitle,
-            ),
-          ),
-        ),
-      ],
     );
   }
 
@@ -473,7 +227,75 @@ class _HomeState extends State<Home> {
 
 /// mid section
 Widget midSection() {
-  return const Placeholder();
+  return Column(
+    children: [
+      cardListerWidget(
+        title: 'Some of my Projects',
+        content: listerContentsWidget(data: data),
+      ),
+      cardListerWidget(
+        title: 'Some of my Blog Posts',
+        content: listerContentsWidget(data: data),
+        isRight: true,
+      ),
+    ],
+  );
+}
+
+
+//Lister
+Widget cardListerWidget(
+    {Widget? content,
+    BoxDecoration? decoration,
+    String? title,
+    TextStyle? titleStyle,
+    List<Color>? titleBackgroundColors,
+    EdgeInsetsGeometry? mainAxis,
+    double? positionTop,
+    double? positionLeft,
+    bool isRight = false}) {
+  Color starterColor = titleBackgroundColors?[0] ?? AppColors.mainBackground;
+  Color finishColor = titleBackgroundColors?[1] ?? AppColors.lightGrey4;
+
+  return Stack(
+    children: <Widget>[
+      Container(
+        width: double.infinity,
+        margin: mainAxis ?? const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(30),
+        decoration: decoration ??
+            BoxDecoration(
+              border: Border.all(color: Colors.black, width: 2),
+              borderRadius: const BorderRadius.all(Radius.circular(20)),
+              shape: BoxShape.rectangle,
+              color: finishColor,
+            ),
+        child: SingleChildScrollView(
+          child: content,
+        ),
+      ),
+      Positioned(
+        left: isRight ? null : positionLeft ?? 50,
+        right: isRight ? positionLeft ?? 50 : null,
+        top: positionTop ?? 0,
+        child: Container(
+          padding: const EdgeInsets.only(bottom: 10, left: 10, right: 10),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [starterColor, finishColor],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              stops: [0.5, 0.5],
+            ),
+          ),
+          child: Text(
+            title ?? 'title of the Card',
+            style: titleStyle ?? AppTextStyles.nameTitle,
+          ),
+        ),
+      ),
+    ],
+  );
 }
 
 ///Components
