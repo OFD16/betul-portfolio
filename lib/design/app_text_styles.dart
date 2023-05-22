@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AppTextStyles {
   static const TextStyle menuItemStyle = TextStyle(
-    color: Color(0xff4B4B4B),
+    color: AppColors.lightGreen5,
     fontFamily: 'Sansita',
     fontSize: 24,
     fontWeight: FontWeight.w700, // Set the font weight to 700
@@ -34,6 +34,14 @@ class AppTextStyles {
     height: 1.2, // Set the line height to 36.6 (30.3 * 1.2 = 36.6)
   );
 
+  static const TextStyle emailTextStyle = TextStyle(
+    color: AppColors.darkGrey,
+    fontFamily: 'Sansita',
+    fontSize: 35,
+    fontWeight: FontWeight.w700, // Set the font weight to 700
+    height: 42 / 35, // Set the line height to 36.6 (30.3 * 1.2 = 36.6)
+  );
+
   static const TextStyle cardTitle = TextStyle(
     color: Colors.black,
     fontFamily: 'Sansita',
@@ -42,12 +50,28 @@ class AppTextStyles {
     height: 1.2, // Set the line height to 36.6 (30.3 * 1.2 = 36.6)
   );
 
+  static const TextStyle footerTitle = TextStyle(
+    color: Colors.black,
+    fontFamily: 'Sansita',
+    fontSize: 40,
+    fontWeight: FontWeight.w700, // Set the font weight to 700
+    height: 48 / 40, // Set the line height to 36.6 (30.3 * 1.2 = 36.6)
+  );
+
   static const TextStyle nameMidTitle = TextStyle(
     color: Colors.black,
     fontFamily: 'Sansita',
     fontSize: 45.29,
     fontWeight: FontWeight.w700,
     height: 1.2,
+  );
+
+  static const TextStyle nameFooter = TextStyle(
+    color: Colors.black,
+    fontFamily: 'Sansita',
+    fontSize: 60,
+    fontWeight: FontWeight.w700,
+    height: 72 / 60,
   );
 
   static const TextStyle nameBigTitle = TextStyle(
@@ -63,7 +87,23 @@ class AppTextStyles {
     fontFamily: 'OpenSans',
     fontSize: 24,
     fontWeight: FontWeight.w400, // Set the font weight to 700
-    height: 1.2, // Set the line height to 36.6 (30.3 * 1.2 = 36.6)
+    height: 27.24 / 24, // Set the line height to 36.6 (30.3 * 1.2 = 36.6)
+  );
+
+  static const TextStyle footerConnection = TextStyle(
+    color: AppColors.darkGrey,
+    fontFamily: 'Sansita',
+    fontSize: 20,
+    fontWeight: FontWeight.w400, // Set the font weight to 700
+    height: 24 / 240, // Set the line height to 36.6 (30.3 * 1.2 = 36.6)
+  );
+
+  static const TextStyle footerDescription = TextStyle(
+    color: AppColors.darkGrey,
+    fontFamily: 'Sansita',
+    fontSize: 24,
+    fontWeight: FontWeight.w400, // Set the font weight to 700
+    height: 28.8 / 24, // Set the line height to 36.6 (30.3 * 1.2 = 36.6)
   );
 
   static const TextStyle cardBlogDescription = TextStyle(
