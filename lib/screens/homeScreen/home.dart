@@ -1,4 +1,5 @@
 import 'package:betul_portfolio/design/app_colors.dart';
+import 'package:betul_portfolio/screens/homeScreen/components/footer.dart';
 import 'package:flutter/material.dart';
 
 import 'components/bodyWidget.dart';
@@ -26,6 +27,8 @@ class _HomeState extends State<Home> {
           )),
           const SizedBox(height: 20),
           midSection(context),
+          const SizedBox(height: 240),
+          Footer(),
         ],
       ),
     );
