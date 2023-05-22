@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../components/InlineHovarableText.dart';
+import '../../../components/inline_hovarable_text.dart';
 import '../../../design/app_text_styles.dart';
 
 Widget secondLineText() {

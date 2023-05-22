@@ -26,6 +26,14 @@ class AppTextStyles {
     height: 1.2, // Set the line height to 36.6 (30.3 * 1.2 = 36.6)
   );
 
+  static const TextStyle cardBlogTitle = TextStyle(
+    color: Colors.black,
+    fontFamily: 'Sansita',
+    fontSize: 32,
+    fontWeight: FontWeight.w700, // Set the font weight to 700
+    height: 1.2, // Set the line height to 36.6 (30.3 * 1.2 = 36.6)
+  );
+
   static const TextStyle cardTitle = TextStyle(
     color: Colors.black,
     fontFamily: 'Sansita',
@@ -56,5 +64,13 @@ class AppTextStyles {
     fontSize: 24,
     fontWeight: FontWeight.w400, // Set the font weight to 700
     height: 1.2, // Set the line height to 36.6 (30.3 * 1.2 = 36.6)
+  );
+
+  static const TextStyle cardBlogDescription = TextStyle(
+    color: Colors.black,
+    fontFamily: 'OpenSans',
+    fontSize: 20,
+    fontWeight: FontWeight.w400, // Set the font weight to 700
+    height: 27.24 / 20, // Set the line height to 27.24 (20* a = 27.24)
   );
 }

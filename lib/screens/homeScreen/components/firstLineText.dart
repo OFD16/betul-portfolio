@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../design/app_text_styles.dart';
-import '../../../components/HovarableText.dart';
+import '../../../components/hovarable_text.dart';
 
 Widget firstLineText() {
   return const Padding(
