@@ -14,7 +14,7 @@ class ListerContent extends StatelessWidget {
         children: <Widget>[
           Container(
               width: double.infinity,
-              height: 427,
+              height:  double.infinity,
               margin: const EdgeInsets.fromLTRB(20, 20, 20, 10),
               padding: const EdgeInsets.all(30),
               decoration: BoxDecoration(
@@ -84,7 +84,7 @@ class ListerContent extends StatelessWidget {
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         mainAxisSpacing: 0,
-        childAspectRatio: 530 / 300, // width/height
+        childAspectRatio: 530 / 350, // width/height
       ),
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,

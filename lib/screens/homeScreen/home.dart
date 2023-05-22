@@ -1,3 +1,4 @@
+import 'package:betul_portfolio/design/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import 'components/bodyWidget.dart';

@@ -38,6 +38,7 @@ Widget midSection(BuildContext context) {
         content: ListerContent(data: data),
         isRight: false,
       ),
+      const SizedBox(height: 80),
       CardLister(
         title: 'Some of my Blog Posts',
         content: content(),
@@ -62,8 +63,7 @@ Widget content() {
         onTap: onPressIcon,
         child: Container(
           margin: const EdgeInsets.only(left: 30),
-          width: 24,
-          height: 24,
+          padding: const EdgeInsets.all(4),
           decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(color: Colors.black, width: 2)),

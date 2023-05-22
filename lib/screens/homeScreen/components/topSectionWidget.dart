@@ -9,7 +9,7 @@ Widget topSection({required Widget header, required Widget body}) {
         child: Image.asset(
           "assets/images/pattern_image.png",
           repeat: ImageRepeat.repeat,
-          color: AppColors.mainBackground,
+          color: AppColors.dotsColor,
         ),
       ),
       Center(
