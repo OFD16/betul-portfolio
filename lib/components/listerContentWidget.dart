@@ -33,7 +33,7 @@ Widget listerContentsWidget({List? data, }) {
                   height: 195,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
+                    border: Border.all(color: Colors.black, width: 2),
                     borderRadius: const BorderRadius.all(Radius.circular(20)),
                   ),
                   child: ClipRRect(
@@ -45,7 +45,6 @@ Widget listerContentsWidget({List? data, }) {
                     ),
                   ),
                 ),
-
                 Text(
                   item?['description'] ??
                       'Lorem ipsum dolor sit amet consectetur. Velit semper dignissim lacus vel sit vehicula facilisis arcu pharetra. ömer ömer ömer ömer ömer  ömer  ömer  ömer  ömer  ömer  ömer  ömer  ömer  Turpis volutpat tristique nulla accumsan',
