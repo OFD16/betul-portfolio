@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../design/app_colors.dart';
+import 'package:betul_portfolio/design/app_colors.dart';
 
 Widget topSection({required Widget header, required Widget body}) {
   return Stack(
@@ -14,6 +14,7 @@ Widget topSection({required Widget header, required Widget body}) {
       ),
       Center(
         child: SingleChildScrollView(
+          physics: const ClampingScrollPhysics(),
           child: Column(
             children: [
               header,

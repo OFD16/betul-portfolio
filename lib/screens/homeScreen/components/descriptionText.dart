@@ -1,6 +1,5 @@
+import 'package:betul_portfolio/design/app_text_styles.dart';
 import 'package:flutter/material.dart';
-
-import '../../../design/app_text_styles.dart';
 
 Widget descriptionText({required String description}) {
   return SizedBox(

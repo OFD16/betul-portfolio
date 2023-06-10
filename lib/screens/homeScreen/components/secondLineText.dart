@@ -1,7 +1,6 @@
+import 'package:betul_portfolio/components/inline_hovarable_text.dart';
+import 'package:betul_portfolio/design/app_text_styles.dart';
 import 'package:flutter/material.dart';
-
-import '../../../components/inline_hovarable_text.dart';
-import '../../../design/app_text_styles.dart';
 
 Widget secondLineText() {
   return const Padding(

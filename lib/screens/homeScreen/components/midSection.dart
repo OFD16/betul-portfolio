@@ -1,9 +1,11 @@
+import 'package:betul_portfolio/components/blog_card.dart';
+import 'package:betul_portfolio/components/card_lister.dart';
+import 'package:betul_portfolio/components/circle_arrow_icon_button.dart';
+import 'package:betul_portfolio/components/lister_content.dart';
+import 'package:betul_portfolio/types/arrow_direction.dart';
 import 'package:flutter/material.dart';
 
-import '../../../components/blog_card.dart';
-import '../../../components/card_lister.dart';
-import '../../../components/lister_content.dart';
-import '../../../design/app_colors.dart';
+import 'package:betul_portfolio/design/app_colors.dart';
 
 final data = [
   {
@@ -41,7 +43,7 @@ Widget midSection(BuildContext context) {
       const SizedBox(height: 80),
       CardLister(
         title: 'Some of my Blog Posts',
-        content: content(),
+        content: content(onPressIcon),
         isRight: true,
         mainAxis: const EdgeInsets.only(top: 20, bottom: 20, left: 80),
         decoration: BoxDecoration(
@@ -55,25 +57,16 @@ Widget midSection(BuildContext context) {
     ],
   );
 }
-Widget content() {
+
+Widget content(void Function()? onPressIcon) {
   return Row(
     children: [
       BlogCard(item: item),
-      InkWell(
-        onTap: onPressIcon,
-        child: Container(
-          margin: const EdgeInsets.only(left: 30),
-          padding: const EdgeInsets.all(4),
-          decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(color: Colors.black, width: 2)),
-          child: const Icon(
-            Icons.chevron_right,
-            size: 18,
-            color: Colors.black,
-          ),
-        ),
-      )
+      const SizedBox(width: 30),
+      CircleIconButton(
+        onPressIcon: onPressIcon,
+        arrowDirection: ArrowDirection.right,
+      ),
     ],
   );
 }

@@ -1,7 +1,6 @@
+import 'package:betul_portfolio/components/hovarable_text.dart';
+import 'package:betul_portfolio/design/app_text_styles.dart';
 import 'package:flutter/material.dart';
-
-import '../../../design/app_text_styles.dart';
-import '../../../components/hovarable_text.dart';
 
 Widget firstLineText() {
   return const Padding(
