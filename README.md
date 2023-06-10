@@ -2,7 +2,10 @@
 
 A new Flutter project.
 
-## Getting Started
+## Getting Started and run on Edge
+```
+flutter run -d edge
+```
 
 This project is a starting point for a Flutter application.
 
