@@ -38,6 +38,7 @@ dependencies:
   auto_route: ^7.4.0
   flutter_lints: ^2.0.0
   flutter_svg: ^2.0.6
+  delayed_display: ^2.0.0
 
 dev_dependencies:
   flutter_test:
