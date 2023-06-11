@@ -17,4 +17,6 @@ class AppColors {
   static const Color lightGrey3 = Color(0xffCCCCCC);
   static const Color lightGrey2 = Color(0xffECECEC);
   static const Color lightGrey1 = Color(0xffA3D2CA);
+  static const Color onHovered = Color(0xff252424);
+  static const Color defaultUnHovered = Color(0xff424141);
 }

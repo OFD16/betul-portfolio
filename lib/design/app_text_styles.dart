@@ -9,6 +9,15 @@ class AppTextStyles {
     fontWeight: FontWeight.w700, // Set the font weight to 700
     height: 1.2, // Set the line height to 36.6 (30.3 * 1.2 = 36.6)
   );
+
+  static const TextStyle hoverButtonStyle = TextStyle(
+    color: Colors.white,
+    fontFamily: 'Sansita',
+    fontSize: 20,
+    fontWeight: FontWeight.w700,
+    height: 24 / 20,
+  );
+
   static const TextStyle menuItemStyle = TextStyle(
     color: AppColors.lightGreen5,
     fontFamily: 'Sansita',
@@ -95,6 +104,14 @@ class AppTextStyles {
     fontSize: 24,
     fontWeight: FontWeight.w400, // Set the font weight to 700
     height: 27.24 / 24, // Set the line height to 36.6 (30.3 * 1.2 = 36.6)
+  );
+
+  static const TextStyle expandedCardDescription = TextStyle(
+    color: Colors.black,
+    fontFamily: 'OpenSans',
+    fontSize: 24,
+    fontWeight: FontWeight.w400,
+    height: 32.68 / 24,
   );
 
   static const TextStyle footerConnection = TextStyle(
