@@ -1,11 +1,9 @@
 import 'package:betul_portfolio/components/blog_card.dart';
-import 'package:betul_portfolio/components/card_lister.dart';
 import 'package:betul_portfolio/components/circle_arrow_icon_button.dart';
-import 'package:betul_portfolio/components/lister_content.dart';
+import 'package:betul_portfolio/components/expander_card.dart';
+
 import 'package:betul_portfolio/types/arrow_direction.dart';
 import 'package:flutter/material.dart';
-
-import 'package:betul_portfolio/design/app_colors.dart';
 
 final data = [
   {
@@ -32,53 +30,14 @@ final data = [
 onPressIcon() => {print('İcona basıldı')};
 var item = data[1];
 
-Widget midSection(BuildContext context) {
-  return Column(
+Widget midSection() {
+  return const Column(
     children: [
-      Stack(clipBehavior: Clip.none, children: [
-        Container(
-          //width: double.infinity,
-          width: 462,
-          height: 266,
-          margin: const EdgeInsets.all(20),
-          padding: const EdgeInsets.all(30),
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black, width: 2),
-            borderRadius: const BorderRadius.all(Radius.circular(20)),
-            shape: BoxShape.rectangle,
-            color: AppColors.exPink,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.7),
-                spreadRadius: 2,
-                blurRadius: 0,
-                offset: const Offset(4, 4),
-              ),
-            ],
-          ),
-        ),
-        Positioned(
-          bottom: 45,
-          left: 45,
-          child: Container(
-            //width: double.infinity,
-            width: 444,
-            height: 252,
-            margin: const EdgeInsets.all(20),
-            padding: const EdgeInsets.all(30),
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black, width: 2),
-              borderRadius: const BorderRadius.all(Radius.circular(10)),
-              shape: BoxShape.rectangle,
-              image: const DecorationImage(
-                image: NetworkImage(
-                    'https://images.ctfassets.net/hrltx12pl8hq/7JnR6tVVwDyUM8Cbci3GtJ/bf74366cff2ba271471725d0b0ef418c/shutterstock_376532611-og.jpg'),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-        )
-      ]),
+      ExpanderCard(
+        title: 'Redesign',
+        description:
+            'Lorem ipsum dolor sit amet consectetur. Est adipiscing neque adipiscing nunc dignissim cursus vitae. Vel consequat amet ',
+      )
     ],
   );
 }

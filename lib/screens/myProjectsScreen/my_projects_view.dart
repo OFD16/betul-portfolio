@@ -27,7 +27,7 @@ class _MyProjectsScreenState extends State<MyProjectsScreen> {
               body: bodyWidget(context),
             )),
             const SizedBox(height: 20),
-            midSection(context),
+            midSection(),
             const SizedBox(height: 240),
             const Footer(),
           ],
