@@ -5,8 +5,12 @@ import '../types/arrow_direction.dart';
 class CircleIconButton extends StatefulWidget {
   final void Function()? onPressIcon;
   final ArrowDirection arrowDirection;
+  final double? iconSize;
   const CircleIconButton(
-      {required this.onPressIcon, required this.arrowDirection, Key? key})
+      {required this.onPressIcon,
+      required this.arrowDirection,
+      Key? key,
+      this.iconSize})
       : super(key: key);
 
   @override
@@ -38,7 +42,7 @@ class _CircleIconButtonState extends State<CircleIconButton> {
               border: Border.all(color: Colors.black, width: 2)),
           child: Icon(
             iconDirection(widget.arrowDirection),
-            size: 18,
+            size: widget.iconSize ?? 28,
             color: Colors.black,
           ),
         ),
