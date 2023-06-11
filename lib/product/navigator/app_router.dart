@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:betul_portfolio/screens/about_view.dart';
-import 'package:betul_portfolio/screens/blog_view.dart';
-import 'package:betul_portfolio/screens/project_view.dart';
-import 'package:betul_portfolio/screens/my_blogs_view.dart';
-import 'package:betul_portfolio/screens/my_projects_view.dart';
+import 'package:betul_portfolio/screens/aboutScreen/about_view.dart';
+import 'package:betul_portfolio/screens/blogScreen/blog_view.dart';
+import 'package:betul_portfolio/screens/projectScreen/project_view.dart';
+import 'package:betul_portfolio/screens/myBlogsScreen/my_blogs_view.dart';
+import 'package:betul_portfolio/screens/myProjectsScreen/my_projects_view.dart';
 import '../../screens/homeScreen//home_view.dart';
 
 part 'app_router.gr.dart';

@@ -1,16 +1,21 @@
-import 'package:auto_route/auto_route.dart';
-
 import 'package:betul_portfolio/components/footer.dart';
 import 'package:betul_portfolio/components/top_section.dart';
+
 import 'package:flutter/material.dart';
+import 'package:auto_route/auto_route.dart';
 
 import 'components/bodyWidget.dart';
 import 'components/midSection.dart';
 
 @RoutePage()
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class MyProjectsScreen extends StatefulWidget {
+  const MyProjectsScreen({super.key});
 
+  @override
+  State<MyProjectsScreen> createState() => _MyProjectsScreenState();
+}
+
+class _MyProjectsScreenState extends State<MyProjectsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
