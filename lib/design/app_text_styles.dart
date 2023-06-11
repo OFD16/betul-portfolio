@@ -2,6 +2,13 @@ import 'package:betul_portfolio/design/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppTextStyles {
+  static const TextStyle pageTitle = TextStyle(
+    color: Colors.black,
+    fontFamily: 'Sansita',
+    fontSize: 100,
+    fontWeight: FontWeight.w700, // Set the font weight to 700
+    height: 1.2, // Set the line height to 36.6 (30.3 * 1.2 = 36.6)
+  );
   static const TextStyle menuItemStyle = TextStyle(
     color: AppColors.lightGreen5,
     fontFamily: 'Sansita',
