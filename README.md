@@ -12,7 +12,9 @@ if i need to update my routes i need to run this command and update app_router.g
 flutter packages pub run build_runner build
 ```
 
-This project is a starting point for a Flutter application.
+## Issues
+lib > components > expander_card.dart > _ExpanderCardState > onExit
+- [TO DO]() It gets buggy when I enter and exit endlessly and wait on it, but then it gets resolved when I wait outside and enter again.
 
 A few resources to get you started if this is your first Flutter project:
 
