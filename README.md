@@ -8,7 +8,7 @@ This is a Betül's -My dear- portfolio web site repo.
 
 - [Furkan Çevik](https://github.com/furkancvk)
 
-- [@Betül Özkan]([https://github.com/furkancvk](https://www.linkedin.com/in/betul-0zkan/)) - UI/UX Designer
+- [@Betül Özkan](https://www.linkedin.com/in/betul-0zkan/) - UI/UX Designer
 
 ## Tech Stack
 
