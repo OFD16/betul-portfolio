@@ -21,9 +21,6 @@ This is a Betül's -My dear- portfolio web site repo.
 ## Demo
 https://www.youtube.com/watch?v=3ZrKV8t5mWU&feature=youtu.be
 
-## Issues
-* [StackOverFlow Issue](https://stackoverflow.com/questions/76261975/how-to-make-container-borders-as-in-image-in-flutter)
-
 ## Getting Started and run on Edge
 ```
 flutter run -d edge
@@ -37,6 +34,7 @@ flutter packages pub run build_runner build
 ## Issues
 lib > components > expander_card.dart > _ExpanderCardState > onExit
 - [TO DO]() It gets buggy when I enter and exit endlessly and wait on it, but then it gets resolved when I wait outside and enter again.
+- [StackOverFlow Issue](https://stackoverflow.com/questions/76261975/how-to-make-container-borders-as-in-image-in-flutter)
 
 A few resources to get you started if this is your first Flutter project:
 
