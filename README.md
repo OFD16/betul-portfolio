@@ -2,6 +2,28 @@
 
 This is a Betül's -My dear- portfolio web site repo.
 
+## Authors
+
+- [Ömer Faruk Demirsoy](https://github.com/OFD16)
+
+- [Furkan Çevik](https://github.com/furkancvk)
+
+- [@Betül Özkan]([https://github.com/furkancvk](https://www.linkedin.com/in/betul-0zkan/)) - UI/UX Designer
+
+## Tech Stack
+
+**Client:** Dart, Flutter 
+
+**Backend:** Node.js, Express.js, Firebase
+
+**Database** PostgreSQL
+
+## Demo
+https://www.youtube.com/watch?v=3ZrKV8t5mWU&feature=youtu.be
+
+## Issues
+* [StackOverFlow Issue](https://stackoverflow.com/questions/76261975/how-to-make-container-borders-as-in-image-in-flutter)
+
 ## Getting Started and run on Edge
 ```
 flutter run -d edge
