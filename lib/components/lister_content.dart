@@ -21,7 +21,11 @@ class ListerContent extends StatelessWidget {
       itemCount: data?.length,
       itemBuilder: (BuildContext context, int index) {
         final item = data?[index];
-        return HomeCard();
+        return HomeCard(
+          title: item?['title'],
+          description: item?['description'],
+          image: item?['image'],
+        );
       },
     );
   }
