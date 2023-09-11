@@ -55,3 +55,55 @@ class _HeaderState extends State<Header> {
     );
   }
 }
+
+
+    // var tabs = [
+    //   {
+    //     'name': 'Betul\nOzkan',
+    //     'route': '/Home',
+    //     'softWrap': true,
+    //     'style': AppTextStyles.nameTitle
+    //   },
+    //   {
+    //     'name': 'My Projects',
+    //     'route': '/MyProjects',
+    //     'softWrap': false,
+    //     'style': AppTextStyles.menuItemStyle
+    //   },
+    //   {
+    //     'name': 'My Blogs',
+    //     'route': '/MyBlogs',
+    //     'softWrap': true,
+    //     'style': AppTextStyles.menuItemStyle
+    //   },
+    //   {
+    //     'name': 'About',
+    //     'route': '/About',
+    //     'softWrap': true,
+    //     'style': AppTextStyles.menuItemStyle
+    //   },
+    //   {
+    //     'name': 'Contact Me',
+    //     'route': '/ContactMe',
+    //     'softWrap': true,
+    //     'style': AppTextStyles.menuItemStyle
+    //   }
+    // ];
+
+
+
+    // Widget tabButton({name, route, softWrap, style}) => TextButton(
+    //       onPressed: () => {appRouter.navigateNamed(name)},
+    //       child: Text(name,
+    //           softWrap: softWrap, style: style | AppTextStyles.menuItemStyle),
+    //     );
+
+
+    //         tabs.map((e) {
+    //         return tabButton(
+    //           name: e['name'],
+    //           route: e['route'],
+    //           softWrap: e['softWrap'],
+    //           style: e['style'],
+    //         );
+    //       }).toList(), // Convert the Iterable to a List
