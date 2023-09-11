@@ -10,8 +10,9 @@ class ExpanderCard extends StatefulWidget {
   final String title;
   final String description;
   final String? imageUrl;
+  final Color? background;
   const ExpanderCard(
-      {Key? key, required this.title, required this.description, this.imageUrl})
+      {Key? key, required this.title, required this.description, this.imageUrl, this.background})
       : super(key: key);
 
   @override
@@ -35,18 +36,11 @@ class _ExpanderCardState extends State<ExpanderCard> {
       });
 
   void onExit(_) {
-    //TO DO: sonsuz defa gir çık yapıp üstünde bekleyince buglanıyor
-    // ama sonra dışarda bekleyip tekrar girince çözülüyor
-    _exitTimer?.cancel(); // Cancel any pending delayed execution
     setState(() {
       _isHovered = false;
+      containerHeight = 252;
     });
 
-    _exitTimer = Timer(const Duration(seconds: 1), () {
-      setState(() {
-        containerHeight = 252;
-      });
-    });
   }
 
   @override
@@ -66,7 +60,7 @@ class _ExpanderCardState extends State<ExpanderCard> {
               border: Border.all(color: Colors.black, width: 2),
               borderRadius: const BorderRadius.all(Radius.circular(20)),
               shape: BoxShape.rectangle,
-              color: AppColors.exPink,
+              color: widget.background ?? AppColors.exPink,
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(0.7),
@@ -76,7 +70,7 @@ class _ExpanderCardState extends State<ExpanderCard> {
                 ),
               ],
             ),
-            duration: const Duration(milliseconds: 200),
+            duration: const Duration(milliseconds: 400),
             curve: Curves.easeInOut,
             child: Stack(
               children: [
@@ -90,7 +84,7 @@ class _ExpanderCardState extends State<ExpanderCard> {
                     duration: const Duration(seconds: 1),
                     curve: Curves.easeInOut,
                     child: DelayedDisplay(
-                      delay: const Duration(milliseconds: 500),
+                      delay: const Duration(milliseconds: 1500),
                       fadingDuration: const Duration(milliseconds: 500),
                       slidingBeginOffset: const Offset(0.0, -0.2),
                       slidingCurve: Curves.easeInOut,
